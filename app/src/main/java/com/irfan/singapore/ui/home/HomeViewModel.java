@@ -21,6 +21,7 @@ public class HomeViewModel extends ViewModel {
     private Retrofit retrofit;
 
     public HomeViewModel() {
+        // Initialize the variables
         responseMutableLiveData = new MutableLiveData<>();
         errorMsg = new MutableLiveData<>();
         progressDialog = new MutableLiveData<>();
@@ -33,7 +34,9 @@ public class HomeViewModel extends ViewModel {
         fetchDataFromApi();
     }
 
+    // Set the response data
     private void fetchDataFromApi() {
+        // call the api
         ApiService apiService = retrofit.create(ApiService.class);
         progressDialog.postValue(true);
         apiService
@@ -44,11 +47,13 @@ public class HomeViewModel extends ViewModel {
     }
 
     private void onError(Throwable throwable) {
+        // Handle on API Failure
         errorMsg.postValue(throwable.getLocalizedMessage());
         progressDialog.postValue(false);
     }
 
     private void onSuccess(PsiResponse psiResponse) {
+        // Handle on API Success
         progressDialog.postValue(false);
         if (psiResponse.getRegionMetadata().size() != 0) {
             responseMutableLiveData.postValue(psiResponse);
@@ -57,6 +62,7 @@ public class HomeViewModel extends ViewModel {
         }
     }
 
+    // Get the response data
     public LiveData<PsiResponse> getResponseData() {
         return responseMutableLiveData;
     }
