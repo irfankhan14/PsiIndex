@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Singapore</string>
     <string name="title_home">Home</string>
+    <string name="title_close_app">Close App</string>
     <string name="national_string">national</string>
     <string name="loading_string">loading...</string>
     <string name="marker_title_string">Click to see Psi Index details for : </string>
     <string name="google_maps_key">AIzaSyBYXQqtd2uDADNXejyt1p6X-AcwyN2mqig</string>
-
+    <string name="txt_close_app">Do you want to close the app?</string>
 </resources>

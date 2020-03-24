@@ -11,6 +11,7 @@ import retrofit2.http.GET;
  */
 public interface ApiService {
 
+    // Base URL
     String BASE_URL = "https://api.data.gov.sg/v1/environment/";
 
     @GET("psi")

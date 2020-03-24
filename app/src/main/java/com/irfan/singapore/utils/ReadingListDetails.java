@@ -10,6 +10,7 @@ import java.util.ArrayList;
  */
 public class ReadingListDetails {
 
+    // Get the Regions Title
     public static String getRegionTitle(String value) {
         String[] arrValue = value.split(": ");
         String title = arrValue[1];
@@ -36,6 +37,7 @@ public class ReadingListDetails {
         return readingDetailsPair;
     }
 
+    // Get North Zone Readings
     public static ArrayList getNorthReadings(Readings readings) {
         ArrayList readingDetailsPair = new ArrayList();
         readingDetailsPair.add(new ReadingDetailsPair(PsiAppConstants.co_eight_hour_max, readings.getCo_eight_hour_max().getNorth()));
@@ -53,6 +55,7 @@ public class ReadingListDetails {
         return readingDetailsPair;
     }
 
+    // Get South Zone Readings
     private static ArrayList getSouthReadings(Readings readings) {
         ArrayList readingDetailsPair = new ArrayList();
         readingDetailsPair.add(new ReadingDetailsPair(PsiAppConstants.co_eight_hour_max, readings.getCo_eight_hour_max().getSouth()));
@@ -70,6 +73,7 @@ public class ReadingListDetails {
         return readingDetailsPair;
     }
 
+    // Get East Zone Readings
     private static ArrayList getEastReadings(Readings readings) {
         ArrayList readingDetailsPair = new ArrayList();
         readingDetailsPair.add(new ReadingDetailsPair(PsiAppConstants.co_eight_hour_max, readings.getCo_eight_hour_max().getEast()));
@@ -87,6 +91,7 @@ public class ReadingListDetails {
         return readingDetailsPair;
     }
 
+    // Get West Zone Readings
     private static ArrayList getWestReadings(Readings readings) {
         ArrayList readingDetailsPair = new ArrayList();
         readingDetailsPair.add(new ReadingDetailsPair(PsiAppConstants.co_eight_hour_max, readings.getCo_eight_hour_max().getWest()));
@@ -104,6 +109,7 @@ public class ReadingListDetails {
         return readingDetailsPair;
     }
 
+    // Get Central Zone Readings
     private static ArrayList<ReadingDetailsPair> getCentralReadings(Readings readings) {
         ArrayList readingDetailsPair = new ArrayList();
         readingDetailsPair.add(new ReadingDetailsPair(PsiAppConstants.co_eight_hour_max, readings.getCo_eight_hour_max().getCentral()));

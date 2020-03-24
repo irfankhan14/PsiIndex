@@ -9,11 +9,10 @@
     <dimen name="margin12">12dp</dimen>
     <dimen name="margin16">16dp</dimen>
     <dimen name="margin20">20dp</dimen>
-
     <dimen name="margin40">40dp</dimen>
     <dimen name="margin44">44dp</dimen>
 
-
     <dimen name="tv12">12sp</dimen>
     <dimen name="tv16">16sp</dimen>
+
 </resources>

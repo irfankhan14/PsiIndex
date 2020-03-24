@@ -41,6 +41,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Google
     private SupportMapFragment mMapFragment;
     private Dialog dialog;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -57,39 +58,26 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Google
         return rootView;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void addObservers() {
         // get response from the api
         homeViewModel
                 .getResponseData()
-                .observe(getViewLifecycleOwner(), new Observer<PsiResponse>() {
-                    @Override
-                    public void onChanged(PsiResponse response) {
-                        psiResponse = response;
-                        readings = response.getItems().get(0).getReadings();
-                        mMapFragment.getMapAsync(HomeFragment.this::onMapReady);
-                    }
+                .observe(getViewLifecycleOwner(), response -> {
+                    psiResponse = response;
+                    readings = response.getItems().get(0).getReadings();
+                    mMapFragment.getMapAsync(HomeFragment.this::onMapReady);
                 });
 
         // handle on response error
         homeViewModel
                 .getErrorMessage()
-                .observe(getViewLifecycleOwner(), new Observer<String>() {
-                    @Override
-                    public void onChanged(String text) {
-                        Toast.makeText(getActivity(), text, Toast.LENGTH_LONG).show();
-                    }
-                });
+                .observe(getViewLifecycleOwner(), text -> Toast.makeText(getActivity(), text, Toast.LENGTH_LONG).show());
 
         // dialog show and dismiss, on App load and after API response
         homeViewModel
                 .getProgressDialog()
-                .observe(getViewLifecycleOwner(), new Observer<Boolean>() {
-                    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-                    @Override
-                    public void onChanged(Boolean value) {
-                        displayProgressDialog(value);
-                    }
-                });
+                .observe(getViewLifecycleOwner(), value -> displayProgressDialog(value));
     }
 
     private void initializeViewModel() {
@@ -142,7 +130,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Google
                 R.dimen.margin4);
         recyclerViewReadings.addItemDecoration(customItemDecoration);
 
-        readingsTitle.setText(ReadingListDetails.getRegionTitle(marker.getTitle()).toUpperCase() + " Readings");
+        readingsTitle.setText(ReadingListDetails.getRegionTitle(marker.getTitle()).toUpperCase() + " Region Readings");
 
         // Set adapter in recyclerview
         ReadingItemsAdapter homePageAdapter = new ReadingItemsAdapter(getActivity(), ReadingListDetails.getReadingDetails(
