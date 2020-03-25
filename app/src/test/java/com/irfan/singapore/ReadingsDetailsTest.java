@@ -2,7 +2,6 @@ package com.irfan.singapore;
 
 import com.google.gson.Gson;
 import com.irfan.singapore.model.PsiResponse;
-import com.irfan.singapore.ui.home.viewmodel.HomeViewModel;
 import com.irfan.singapore.utils.ReadingListDetails;
 
 import org.junit.Assert;
