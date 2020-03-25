@@ -1,11 +1,7 @@
 package com.irfan.singapore;
 
-import com.irfan.singapore.utils.ReadingListDetails;
-
 import org.junit.Assert;
 import org.junit.Test;
-
-import static junit.framework.TestCase.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
