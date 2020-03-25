@@ -12,7 +12,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,6 +28,7 @@ import com.irfan.singapore.adapter.ReadingItemsAdapter;
 import com.irfan.singapore.model.PsiResponse;
 import com.irfan.singapore.model.Readings;
 import com.irfan.singapore.model.RegionMetadatum;
+import com.irfan.singapore.ui.home.viewmodel.HomeViewModel;
 import com.irfan.singapore.utils.CustomItemDecoration;
 import com.irfan.singapore.utils.ReadingListDetails;
 
