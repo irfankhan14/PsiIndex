@@ -28,7 +28,7 @@ import com.irfan.singapore.adapter.ReadingItemsAdapter;
 import com.irfan.singapore.model.PsiResponse;
 import com.irfan.singapore.model.Readings;
 import com.irfan.singapore.model.RegionMetadatum;
-import com.irfan.singapore.ui.home.viewmodel.HomeViewModel;
+import com.irfan.singapore.viewmodel.home.HomeViewModel;
 import com.irfan.singapore.utils.CustomItemDecoration;
 import com.irfan.singapore.utils.ReadingListDetails;
 

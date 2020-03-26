@@ -1,9 +1,6 @@
-package com.irfan.singapore;
+package com.irfan.singapore.ui.activity;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.irfan.singapore.R;
 
 public class MainActivity extends AppCompatActivity {
 

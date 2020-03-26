@@ -1,4 +1,4 @@
-package com.irfan.singapore.ui.home.viewmodel;
+package com.irfan.singapore.viewmodel.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
