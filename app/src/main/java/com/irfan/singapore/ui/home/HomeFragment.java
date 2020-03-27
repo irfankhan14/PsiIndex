@@ -133,8 +133,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Google
         readingsTitle.setText(ReadingListDetails.getRegionTitle(marker.getTitle()).toUpperCase() + " Region Readings");
 
         // Set adapter in recyclerview
-        ReadingItemsAdapter homePageAdapter = new ReadingItemsAdapter(getActivity(), ReadingListDetails.getReadingDetails(
-                readings,
+        ReadingItemsAdapter homePageAdapter = new ReadingItemsAdapter(
+                ReadingListDetails.getReadingDetails(readings,
                 ReadingListDetails.getRegionTitle(marker.getTitle())));
         recyclerViewReadings.setAdapter(homePageAdapter);
 

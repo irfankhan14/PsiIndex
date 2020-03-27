@@ -1,6 +1,5 @@
 package com.irfan.singapore.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import java.util.ArrayList;
 
 public class ReadingItemsAdapter extends RecyclerView.Adapter<ReadingItemsAdapter.MyViewHolder> {
 
-    private Context context;
     private ArrayList<ReadingDetailsPair> readingDetailsPairsList;
     TextView readingItems;
 
@@ -26,8 +24,7 @@ public class ReadingItemsAdapter extends RecyclerView.Adapter<ReadingItemsAdapte
         }
     }
 
-    public ReadingItemsAdapter(Context context, ArrayList<ReadingDetailsPair> list) {
-        this.context = context;
+    public ReadingItemsAdapter(ArrayList<ReadingDetailsPair> list) {
         this.readingDetailsPairsList = list;
     }
 

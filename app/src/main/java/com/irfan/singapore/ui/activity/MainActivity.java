@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-        navView.findViewById(R.id.navigation_log_out).setOnClickListener( v -> navigate_to_close_app());
+        navView.findViewById(R.id.navigation_log_out).setOnClickListener( v -> navigateToCloseApp());
 
     }
 
-    private void navigate_to_close_app() {
+    private void navigateToCloseApp() {
         new AlertDialog.Builder(MainActivity.this)
                 .setMessage(getResources().getString(R.string.txt_close_app))
                 .setPositiveButton(android.R.string.yes, (dialog, which) -> {
