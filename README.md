@@ -17,3 +17,6 @@ All the libraries used in this project and their version numbers are defined in 
  
 # Environment Used
 App was developed on Android Studio v3.6
+
+# Test Coverage details
+https://github.com/irfankhan14/PsiIndex/blob/master/app/capture/psi_index_app_test_coverage.png
