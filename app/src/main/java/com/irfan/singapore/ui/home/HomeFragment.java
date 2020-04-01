@@ -106,7 +106,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Google
     }
 
     private void drawMarkers(RegionMetadatum regionMetadatum) {
-        // Add Markers and title
+        // Add Markers and title to Map
         LatLng latLng = new LatLng(regionMetadatum.getLabelLocation().getLatitude(), regionMetadatum.getLabelLocation().getLongitude());
         String title = getActivity().getResources().getString(R.string.marker_title_string) + " " + regionMetadatum.getName();
         googleMap.addMarker(new MarkerOptions().position(latLng).title(title));
